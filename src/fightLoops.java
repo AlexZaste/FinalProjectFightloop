@@ -23,40 +23,44 @@ public class fightLoops {
             // PlayerAttacking(playerInput, enemyHealth, kick, punch, tackle);
             if (playerInput == 1) {
                 enemyHealth = enemyHealth - kick;
+                System.out.println("You deliver a devistating blow, your strength is second to none.");
             }
             if (playerInput == 2) {
                 enemyHealth = enemyHealth - punch;
-
+                System.out.println("You deliver a lethal blow, you're as agile as the wind.");
             }
             if (playerInput == 3) {
                 enemyHealth = enemyHealth - tackle;
+                System.out.println("You force yourself into the enemy,you're the size of a truck this is is destructive");
 
-
-            } else {
-                System.out.println("Nothing happens, you didn't do it right");
+            } if(playerInput>=4){
+                impropperInput();
             }
 
 
 
             Random rand = new Random();
 
-            enemyInput = rand.nextInt((3 - 1) + 1) + 1;
+            enemyInput = rand.nextInt(3+1);
 
             if (enemyInput == 1) {
                 playerHealth = playerHealth - kick;
+                System.out.println("THe enemy viciously kicks you");
             }
             if (enemyInput == 2) {
                 playerHealth = playerHealth - punch;
+                System.out.println("The enemy strikes you with his might fist");
 
             }
             if (enemyInput == 3) {
                 playerHealth = playerHealth - tackle;
+                System.out.println("The enemy strikes you with it's giant body");
 
-
-            } else {
-                System.out.println("Nothing happens, you didn't do it right");
+            } if(enemyInput>=4) {
+                impropperInput();
 
             }
+            //used to check if loop is working properly with health.
             System.out.println(enemyHealth);
             System.out.println(playerHealth);
 
@@ -86,13 +90,16 @@ public class fightLoops {
         System.out.println("You've  reached the end of your line... BOOM!");
 
     }
-    public static void StartFights () {
+    public static void impropperInput () {
+        System.out.println("You've  reached the end of your line... BOOM!");
+    }
+    public static void StartFights() {
         System.out.println("""
                      please enter 1,2 or 3 key to attack\s
                     Quickly what would you like to do\s
                     Kick: 1\s
                     Punch: 2 \s
-                    Tackle: 3""");
+                    Tackle: 3\s\s""");
 
     }
     // public static void NothingHappens () {
