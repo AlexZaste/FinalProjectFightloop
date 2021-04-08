@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 public class fightLoops {
+    // still working ont this
     // figure out how to
     public static void main(String[] args) {
         // boolean playerIsAlive = true;
